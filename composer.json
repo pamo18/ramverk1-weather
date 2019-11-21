@@ -1,7 +1,7 @@
 {
-    "name": "pamo/ramverk1-weather",
+    "name": "pamo18/ramverk1-weather",
     "type": "library",
-    "description": "Pamo Weather module.",
+    "description": "Pamo18 Weather module.",
     "keywords": ["boilerplate", "framework", "mvc", "micro", "education"],
     "homepage": "http://www.student.bth.se/~pamo18/dbwebb-kurser/ramverk1/me/redovisa/htdocs/",
     "license": "MIT",
@@ -23,9 +23,16 @@
     },
     "minimum-stability": "beta",
     "prefer-stable": true,
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/pamo18/ramverk1-weather"
+        }
+    ],
     "require": {
         "anax/anax-ramverk1-me": "^1.0.0",
-        "pamo/ramverk1-weather": "dev-master"
+        "pamo18/ramverk1-weather": "dev-master",
+        "anax/anax-cli": "^1.2"
     },
     "require-dev": {
         "phpunit/phpunit": "^7"
