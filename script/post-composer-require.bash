@@ -2,8 +2,9 @@
 #
 # Install Weather service into an Anax installation using a default setup.
 #
-install -d config/di config/route
-rsync -av vendor/anax/remserver/config/remserver* config
-rsync -av vendor/anax/remserver/content/index.md content/remserver.md
-rsync -av vendor/anax/remserver/config/route/remserver.php config/route
-rsync -av vendor/anax/remserver/config/di.php config/di
+rsync -av vendor/pamo/ramverk1-weather/config/ config/
+rsync -av vendor/pamo/ramverk1-weather/content/ content/
+rsync -av vendor/pamo/ramverk1-weather/htdocs/ htdocs/
+rsync -av vendor/pamo/ramverk1-weather/src/ src/
+rsync -av vendor/pamo/ramverk1-weather/test/ test/
+rsync -av vendor/pamo/ramverk1-weather/view/ view/
