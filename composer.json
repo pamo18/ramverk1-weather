@@ -31,8 +31,7 @@
     ],
     "require": {
         "anax/anax-ramverk1-me": "^1.0.0",
-        "pamo18/ramverk1-weather": "dev-master",
-        "anax/anax-cli": "^1.2"
+        "pamo18/ramverk1-weather": "dev-master"
     },
     "require-dev": {
         "phpunit/phpunit": "^7"
