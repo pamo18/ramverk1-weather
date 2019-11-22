@@ -1,5 +1,5 @@
 /.bin
 /build
 /vendor
-/a
+/anax
 composer.lock

@@ -3,10 +3,9 @@
 namespace Pamo\IPGeotag;
 
 use PHPUnit\Framework\TestCase;
-use Pamo\IPGeotag\IPGeotag;
 
 /**
- * Example test class.
+ * test class.
  */
 class IPGeotagTest extends TestCase
 {
@@ -69,5 +68,34 @@ class IPGeotagTest extends TestCase
         $res = $this->ipGeotager->getClientIP();
         $this->assertIsString($res);
         unset($_SERVER["REMOTE_ADDR"]);
+    }
+
+    /**
+     * Test getClientIP
+     */
+    public function testGetClientIPTest()
+    {
+        $this->ipGeotager = new IPGeotag;
+        $this->ipGeotager->init();
+        $res = $this->ipGeotager->getClientIP("unknown");
+        $this->assertIsString($res);
+    }
+
+    /**
+     * Test getClientIP
+     */
+    public function testGetClientIPUnknown()
+    {
+        unset($_SERVER["HTTP_CLIENT_IP"]);
+        unset($_SERVER["HTTP_X_FORWARDED_FOR"]);
+        unset($_SERVER["HTTP_X_FORWARDED"]);
+        unset($_SERVER["HTTP_FORWARDED_FOR"]);
+        unset($_SERVER["HTTP_FORWARDED"]);
+        unset($_SERVER["REMOTE_ADDR"]);
+
+        $this->ipGeotager = new IPGeotag;
+        $this->ipGeotager->init();
+        $res = $this->ipGeotager->getClientIP();
+        $this->assertIsString($res);
     }
 }
