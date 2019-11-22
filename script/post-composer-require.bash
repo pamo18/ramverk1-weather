@@ -6,5 +6,8 @@ rsync -av vendor/pamo18/ramverk1-weather/config/ config/
 rsync -av vendor/pamo18/ramverk1-weather/content/ content/
 rsync -av vendor/pamo18/ramverk1-weather/htdocs/ htdocs/
 rsync -av vendor/pamo18/ramverk1-weather/src/ src/
-rsync -av vendor/pamo18/ramverk1-weather/test/ test/
+rsync -av vendor/pamo18/ramverk1-weather/test/GeoTag test/
+rsync -av vendor/pamo18/ramverk1-weather/test/IPGeotag test/
+rsync -av vendor/pamo18/ramverk1-weather/test/IPValidate test/
+rsync -av vendor/pamo18/ramverk1-weather/test/Weather test/
 rsync -av vendor/pamo18/ramverk1-weather/view/ view/
