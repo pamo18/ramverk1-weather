@@ -24,8 +24,9 @@ script:
     - make test
 
 notifications:
-    urls:
-      - https://webhooks.gitter.im/e/f2741cd708bac8ef6e8d
-    on_success: change  # options: [always|never|change] default: always
-    on_failure: always  # options: [always|never|change] default: always
-    on_start: never     # options: [always|never|change] default: always
+    webhooks:
+        urls:
+            - https://webhooks.gitter.im/e/f2741cd708bac8ef6e8d
+        on_success: change  # options: [always|never|change] default: always
+        on_failure: always  # options: [always|never|change] default: always
+        on_start: never     # options: [always|never|change] default: always
