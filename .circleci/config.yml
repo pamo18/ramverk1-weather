@@ -16,9 +16,6 @@ jobs:
         steps:
             - checkout
 
-            - run: sudo apt update # PHP CircleCI 2.0 Configuration File# PHP CircleCI 2.0 Configuration File sudo apt install zlib1g-dev libsqlite3-dev
-            - run: sudo docker-php-ext-install zip
-
             # Download and cache dependencies
             - restore_cache:
                 keys:
@@ -27,7 +24,7 @@ jobs:
                     # is found
                     - v1-dependencies-
 
-            # - run: composer install -n --prefer-dist
+            #- run: composer install -n --prefer-dist
             - run: make install
 
             - save_cache:
