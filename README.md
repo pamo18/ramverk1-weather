@@ -1,6 +1,8 @@
 Weather service module.
 ===========================================
 
+[![Build Status](https://travis-ci.org/pamo18/ramverk1-weather.svg?branch=master)](https://travis-ci.org/pamo18/ramverk1-weather)
+
 This is a weather service module for the PHP framework [Ramverk1](https://github.com/canax/anax-ramverk1-me).
 
 Install as Anax module
