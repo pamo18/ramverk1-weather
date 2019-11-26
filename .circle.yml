@@ -1,0 +1,11 @@
+machine:
+    php:
+        #version: 7.2
+
+test:
+    pre:
+    - make install
+    - make check
+
+    override:
+    - make test
