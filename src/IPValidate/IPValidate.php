@@ -39,7 +39,7 @@ class IPValidate
      */
     public function getType(string $ipAddress) : string
     {
-        $type;
+        $type = "";
 
         switch ($ipAddress) {
             case (filter_var($ipAddress, FILTER_VALIDATE_IP, $this->ipV4)):

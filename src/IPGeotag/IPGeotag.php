@@ -11,10 +11,12 @@ class IPGeotag
      * @var string $baseAddress for the API.
      * @var string $accessKey for authentication.
      * @var array $allData to store Geotag data.
+     * @var string $clientIP for the current IP Address.
      */
     private $baseAddress;
     private $accessKey;
     private $allData;
+    private $clientIP;
 
 
 
