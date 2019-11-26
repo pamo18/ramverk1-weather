@@ -34,3 +34,8 @@ jobs:
 
             - run: make check
             - run: make test
+
+notify:
+    webhooks:
+        # ramverk1-weather
+        - url: https://webhooks.gitter.im/e/f2741cd708bac8ef6e8d
