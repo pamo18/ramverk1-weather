@@ -4,6 +4,10 @@ Weather service module.
 [![Build Status](https://travis-ci.org/pamo18/ramverk1-weather.svg?branch=master)](https://travis-ci.org/pamo18/ramverk1-weather)
 [![CircleCI](https://circleci.com/gh/pamo18/ramverk1-weather.svg?style=svg)](https://circleci.com/gh/pamo18/ramverk1-weather)
 
+[![Build Status](https://scrutinizer-ci.com/g/pamo18/ramverk1-weather/badges/build.png?b=master)](https://scrutinizer-ci.com/g/pamo18/ramverk1-weather/build-status/master)
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/pamo18/ramverk1-weather/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/pamo18/ramverk1-weather/?branch=master)
+[![Code Coverage](https://scrutinizer-ci.com/g/pamo18/ramverk1-weather/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/pamo18/ramverk1-weather/?branch=master)
+
 This is a weather service module for the PHP framework [Ramverk1](https://github.com/canax/anax-ramverk1-me).
 
 Install as Anax module
