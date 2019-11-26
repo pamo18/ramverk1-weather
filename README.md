@@ -2,6 +2,7 @@ Weather service module.
 ===========================================
 
 [![Build Status](https://travis-ci.org/pamo18/ramverk1-weather.svg?branch=master)](https://travis-ci.org/pamo18/ramverk1-weather)
+[![CircleCI](https://circleci.com/gh/pamo18/ramverk1-weather.svg?style=svg)](https://circleci.com/gh/pamo18/ramverk1-weather)
 
 This is a weather service module for the PHP framework [Ramverk1](https://github.com/canax/anax-ramverk1-me).
 

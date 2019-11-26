@@ -27,7 +27,7 @@ jobs:
                     # is found
                     - v1-dependencies-
 
-            - run: composer install -n --prefer-dist
+            # - run: composer install -n --prefer-dist
             - run: make install
 
             - save_cache:
