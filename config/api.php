@@ -6,7 +6,7 @@
 return [
     "key" => [
         "geoTag" => "98792395e0e82aad9e491f1865f6f39f",
-        "weather" => "89f7d71a2e10ce876706ebb44360d31e",
+        "weather" => "c234ee2db273564fc52e5414560201e0",
         "opencagedata" => "8774e0024aa649bab3a396b5177afba2"
     ],
     "url" => [
