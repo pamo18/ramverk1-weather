@@ -2,6 +2,7 @@ Weather service module.
 ===========================================
 
 [![Latest Stable Version](https://poser.pugx.org/pamo18/ramverk1-weather/v/stable)](https://packagist.org/packages/pamo18/ramverk1-weather)
+[![Gitter](https://badges.gitter.im/pamo18/community.svg)](https://gitter.im/pamo18/community?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
 
 [![Build Status](https://travis-ci.org/pamo18/ramverk1-weather.svg?branch=master)](https://travis-ci.org/pamo18/ramverk1-weather)
 [![CircleCI](https://circleci.com/gh/pamo18/ramverk1-weather.svg?style=svg)](https://circleci.com/gh/pamo18/ramverk1-weather)
@@ -9,8 +10,6 @@ Weather service module.
 [![Build Status](https://scrutinizer-ci.com/g/pamo18/ramverk1-weather/badges/build.png?b=master)](https://scrutinizer-ci.com/g/pamo18/ramverk1-weather/build-status/master)
 [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/pamo18/ramverk1-weather/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/pamo18/ramverk1-weather/?branch=master)
 [![Code Coverage](https://scrutinizer-ci.com/g/pamo18/ramverk1-weather/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/pamo18/ramverk1-weather/?branch=master)
-
-[![Maintainability](https://api.codeclimate.com/v1/badges/47f7756bad18e2afbd71/maintainability)](https://codeclimate.com/github/pamo18/ramverk1-weather/maintainability)
 
 This is a weather service module for the PHP framework [Ramverk1](https://github.com/canax/anax-ramverk1-me).
 
