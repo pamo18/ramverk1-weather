@@ -9,12 +9,12 @@ class IPGeotag
 {
     /**
      * @var string $baseAddress for the API.
-     * @var string $accessKey for authentication.
+     * @var string $apiKey for authentication.
      * @var array $allData to store Geotag data.
      * @var string $clientIP for the current IP Address.
      */
     private $baseAddress;
-    private $accessKey;
+    private $apiKey;
     private $allData;
     private $clientIP;
 
@@ -27,11 +27,19 @@ class IPGeotag
      * @param string $accessKey for authentication.
      *
      */
-    public function init(string $baseAddress = null, string $accessKey = null)
+    public function init()
     {
-        $api = require ANAX_INSTALL_PATH . "/config/api.php";
-        $this->baseAddress = $baseAddress ?? $api["url"]["geoTag"];
-        $this->accessKey = $accessKey ?? $api["key"]["geoTag"];
+        $filename = ANAX_INSTALL_PATH . "/config/api.php";
+        $api =  file_exists($filename) ? require $filename : null;
+
+        if ($api) {
+            $this->baseAddress = $api["url"]["geoTag"];
+            $this->apiKey = $api["key"]["geoTag"];
+        } else {
+            $this->baseAddress = getenv("API_URL_GEOTAG");
+            $this->apiKey = getenv("API_KEY_GEOTAG");
+        }
+
         $this->allData = [];
     }
 
@@ -48,7 +56,7 @@ class IPGeotag
     {
         $ipAddress = ($ipAddress ? $ipAddress : $this->clientIP);
         $data = file_get_contents(
-            "$this->baseAddress/$ipAddress?access_key=$this->accessKey"
+            "$this->baseAddress/$ipAddress?access_key=$this->apiKey"
         );
 
         $dataJson = json_decode($data);
@@ -69,7 +77,7 @@ class IPGeotag
     {
         $ipAddress = ($ipAddress ? $ipAddress : $this->clientIP);
         $result = file_get_contents(
-            "$this->baseAddress/$ipAddress?access_key=$this->accessKey"
+            "$this->baseAddress/$ipAddress?access_key=$this->apiKey"
         );
 
         $resultArray = json_decode($result, true);

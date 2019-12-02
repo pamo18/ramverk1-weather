@@ -34,13 +34,22 @@ class Weather
      * @param string $apiKey for authentication.
      *
      */
-    public function init(string $baseAddress = null, string $apiKey = null)
+    public function init()
     {
         $this->data = [];
         $this->multiCurl = new MultiCurl();
-        $this->api = require ANAX_INSTALL_PATH . "/config/api.php";
-        $this->baseAddress = $baseAddress ?? $this->api["url"]["weather"];
-        $this->apiKey = $apiKey ?? $this->api["key"]["weather"];
+
+        $filename = ANAX_INSTALL_PATH . "/config/api.php";
+        $api =  file_exists($filename) ? require $filename : null;
+
+        if ($api) {
+            $this->baseAddress = $api["url"]["weather"];
+            $this->apiKey = $api["key"]["weather"];
+        } else {
+            $this->baseAddress = getenv("API_URL_WEATHER");
+            $this->apiKey = getenv("API_KEY_WEATHER");
+        }
+
         $this->forecastConfig = [
             "exclude" => "exclude=[currently,minutely,hourly,alerts,flags]",
             "units" => "&units=si"
