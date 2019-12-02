@@ -34,15 +34,8 @@ class GeoTag
         $this->multiCurl = new MultiCurl();
         $filename = ANAX_INSTALL_PATH . "/config/api.php";
         $api =  file_exists($filename) ? require $filename : null;
-
-        if ($api) {
-            $this->baseAddress = $api["url"]["opencagedata"];
-            $this->apiKey = $api["key"]["opencagedata"];
-        } else {
-            $this->baseAddress = getenv("API_URL_OPENCAGEDATA");
-            $this->apiKey = getenv("API_KEY_OPENCAGEDATA");
-        }
-
+        $this->baseAddress = $api ? $api["url"]["opencagedata"] : getenv("API_URL_OPENCAGEDATA");
+        $this->apiKey = $api ? $api["key"]["opencagedata"] : getenv("API_KEY_OPENCAGEDATA");
         $this->allData = [];
     }
 

@@ -39,14 +39,8 @@ class Weather
 
         $filename = ANAX_INSTALL_PATH . "/config/api.php";
         $api =  file_exists($filename) ? require $filename : null;
-
-        if ($api) {
-            $this->baseAddress = $api["url"]["weather"];
-            $this->apiKey = $api["key"]["weather"];
-        } else {
-            $this->baseAddress = getenv("API_URL_WEATHER");
-            $this->apiKey = getenv("API_KEY_WEATHER");
-        }
+        $this->baseAddress = $api ? $api["url"]["weather"] : getenv("API_URL_WEATHER");
+        $this->apiKey = $api ? $api["key"]["weather"] : getenv("API_KEY_WEATHER");
 
         $this->forecastConfig = [
             "exclude" => "exclude=[currently,minutely,hourly,alerts,flags]",

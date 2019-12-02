@@ -31,15 +31,8 @@ class IPGeotag
     {
         $filename = ANAX_INSTALL_PATH . "/config/api.php";
         $api =  file_exists($filename) ? require $filename : null;
-
-        if ($api) {
-            $this->baseAddress = $api["url"]["geoTag"];
-            $this->apiKey = $api["key"]["geoTag"];
-        } else {
-            $this->baseAddress = getenv("API_URL_GEOTAG");
-            $this->apiKey = getenv("API_KEY_GEOTAG");
-        }
-
+        $this->baseAddress = $api ? $api["url"]["geoTag"] : getenv("API_URL_GEOTAG");
+        $this->apiKey = $api ? $api["key"]["geoTag"] : getenv("API_KEY_GEOTAG");
         $this->allData = [];
     }
 
