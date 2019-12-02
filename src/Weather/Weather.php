@@ -12,14 +12,12 @@ class Weather
     /**
      * @var array $data to store weather data.
      * @var object $multiCurl tool.
-     * @var array $api all available API's.
      * @var string $baseAddress for the API.
      * @var string $apiKey for authentication.
      * @var array $config for API url.
      */
     private $data;
     private $multiCurl;
-    private $api;
     private $baseAddress;
     private $apiKey;
     private $forecastConfig;
